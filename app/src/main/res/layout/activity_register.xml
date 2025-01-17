@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivty"
+    android:backgroundTint="@color/PrimaryColor">
+
+    <ImageView
+        android:id="@+id/shape_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/blueshape" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/backbutton"
+        android:id="@+id/back_reg"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/Judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shape_register"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="ANIMORA"
+        android:textSize="30dp"
+        android:fontFamily="@font/poppinsbold"
+        android:textColor="@color/PrimaryColor" />
+    <TextView
+        android:id="@+id/judulregister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Judul"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="Sign Up"
+        android:textSize="30dp"
+        android:fontFamily="@font/poppinsbold"
+        android:textColor="@color/SecondaryColor" />
+    <LinearLayout
+        android:id="@+id/ly_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/judulregister"
+        android:layout_marginTop="18dp">
+        
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/buttonshape"
+            android:hint="Enter your name"
+            android:paddingLeft="25dp"
+            android:backgroundTint="@color/white"
+            android:id="@+id/nameregister"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/buttonshape"
+            android:hint="Enter your email"
+            android:paddingLeft="25dp"
+            android:layout_marginTop="18dp"
+            android:backgroundTint="@color/white"
+            android:id="@+id/emailregister"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/buttonshape"
+            android:hint="Create password"
+            android:paddingLeft="25dp"
+            android:layout_marginTop="18dp"
+            android:backgroundTint="@color/white"
+            android:id="@+id/passwordregister"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/buttonshape"
+            android:hint="Confirm Password"
+            android:paddingLeft="25dp"
+            android:layout_marginTop="18dp"
+            android:backgroundTint="@color/white"
+            android:id="@+id/confirmrpass"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/but_regis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:layout_below="@id/ly_1"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bluebutton"
+        android:width="250dp"
+        android:fontFamily="@font/poppinsextra"
+        android:textSize="18dp"
+        android:textColor="@color/white"
+        />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_below="@id/but_regis"
+    android:layout_marginTop="8dp"
+    android:gravity="center">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:text="Already have an account?"
+    android:fontFamily="@font/poppinsregular"
+    android:textColor="@color/black"
+    android:textSize="12sp"
+    />
+    <TextView
+        android:id="@+id/txt_log"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text=" login"
+        android:fontFamily="@font/poppinsregular"
+        android:textSize="12sp"
+        android:textColor="@color/SecondaryColor"
+        />
+</LinearLayout>
+</RelativeLayout>

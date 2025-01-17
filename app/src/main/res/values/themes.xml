@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Animora" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/ButtonColor</item>
+        <item name="colorOnPrimary">@color/PrimaryColor</item>
+        <item name="colorSecondary">@color/SecondaryColor</item>
+    </style>
+</resources>

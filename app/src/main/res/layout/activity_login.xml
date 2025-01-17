@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/shape_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/shape" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/backbutton"
+        android:id="@+id/back_log"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:id="@+id/judullogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shape_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="Welcome Back"
+        android:textSize="30dp"
+        android:fontFamily="@font/poppinsbold"
+        android:textColor="@color/ButtonColor" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/petlog"
+        android:id="@+id/petlog"
+        android:layout_below="@+id/judullogin"
+        android:paddingLeft="25dp"
+        />
+    <LinearLayout
+        android:id="@+id/ly_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/petlog"
+        android:layout_marginTop="18dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/buttonshape"
+            android:hint="Enter your name"
+            android:paddingLeft="25dp"
+            android:backgroundTint="@color/white"
+            android:id="@+id/nameregister"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/buttonshape"
+            android:hint="Enter your password"
+            android:paddingLeft="25dp"
+            android:layout_marginTop="18dp"
+            android:backgroundTint="@color/white"
+            android:id="@+id/passwordregister"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/but_log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="login"
+        android:layout_below="@id/ly_2"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/buttonshape"
+        android:width="250dp"
+        android:fontFamily="@font/poppinsextra"
+        android:textSize="18dp"
+        android:textColor="@color/white"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/but_log"
+        android:layout_marginTop="8dp"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text=" \do you already have an account?"
+            android:fontFamily="@font/poppinsregular"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text=" Sign Up"
+            android:fontFamily="@font/poppinsregular"
+            android:textSize="12sp"
+            android:id="@+id/txt_reg"
+            android:textColor="@color/ButtonColor"
+            />
+    </LinearLayout>
+</RelativeLayout>

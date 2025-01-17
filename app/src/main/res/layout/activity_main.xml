@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/shape"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/shape" />
+
+    <ImageView
+        android:id="@+id/imganimora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shape"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/animora" />
+
+    <TextView
+        android:id="@+id/sambutan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imganimora"
+        android:layout_centerHorizontal="true"
+        android:text="Welcome to ANIMORA"
+        android:textSize="22dp"
+        android:fontFamily="@font/poppinsbold"
+        android:textColor="@color/black"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sambutan"
+        android:layout_marginTop="22dp"
+        android:width="250dp"
+        android:text="Login"
+        android:textSize="22dp"
+        android:textColor="@color/white"
+        android:id="@+id/btnlogin"
+        android:background="@drawable/buttonshape"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnlogin"
+        android:layout_marginTop="22dp"
+        android:width="250dp"
+        android:text="REGISTER"
+        android:textSize="22dp"
+        android:textColor="@color/white"
+        android:id="@+id/btnregister"
+        android:background="@drawable/buttonshape"
+        android:layout_centerHorizontal="true"
+        />
+</RelativeLayout>
