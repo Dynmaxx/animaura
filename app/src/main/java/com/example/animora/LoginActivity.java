@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.animora.object.UserDatabase;
+import com.example.animora.database.UserDatabase;
 
 public class LoginActivity extends AppCompatActivity {
     private ImageView back_log;
@@ -49,15 +49,17 @@ public class LoginActivity extends AppCompatActivity {
 
                 // Cek login
                 if (userDatabase.validateUser (email, password)) {
+                    String username = userDatabase.getUsernameByEmail(email);
                     // Simpan status login menggunakan SharedPreferences
                     SharedPreferences sharedPreferences = getSharedPreferences("user_prefs", MODE_PRIVATE);
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putString("email", email);
                     editor.apply();
-
                     Toast.makeText(LoginActivity.this, "Login successful!", Toast.LENGTH_SHORT).show();
                     // Navigasi ke Home Activity
-                    startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+                    Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                    intent.putExtra("USERNAME", username);
+                    startActivity(intent);
                     finish();
                 } else {
                     Toast.makeText(LoginActivity.this, "Invalid email or password!", Toast.LENGTH_SHORT).show();

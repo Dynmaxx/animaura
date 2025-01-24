@@ -1,4 +1,4 @@
-package com.example.animora.object;
+package com.example.animora.database;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -28,7 +28,7 @@ public class UserDatabase extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public boolean registerUser (String username, String email, String password) {
+    public boolean registerUser(String username, String email, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put("username", username);
@@ -39,11 +39,32 @@ public class UserDatabase extends SQLiteOpenHelper {
         return result != -1; // return true if insert was successful
     }
 
-    public boolean validateUser (String email, String password) {
+    public boolean validateUser(String email, String password) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_USERS + " WHERE email = ? AND password = ?", new String[]{email, password});
         boolean isValid = cursor.getCount() > 0;
         cursor.close();
         return isValid;
+    }
+
+    public String getUsernameByEmail(String email) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT username FROM " + TABLE_USERS + " WHERE email = ?", new String[]{email});
+
+        if (cursor != null) {
+            if (cursor.moveToFirst()) {
+                int columnIndex = cursor.getColumnIndex("username");
+                if (columnIndex != -1) { // Check if column index is valid
+                    String username = cursor.getString(columnIndex);
+                    cursor.close();
+                    return username;
+                } else {
+                    cursor.close();
+                    throw new IllegalArgumentException("Column 'username' does not exist in the result set.");
+                }
+            }
+            cursor.close();
+        }
+        return null; // Jika tidak ditemukan
     }
 }

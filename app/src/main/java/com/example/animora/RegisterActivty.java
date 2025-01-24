@@ -10,7 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.animora.object.UserDatabase;
+import com.example.animora.database.UserDatabase;
 
 public class RegisterActivty extends AppCompatActivity {
     private ImageView back_reg;

@@ -63,6 +63,7 @@
             android:layout_height="48dp"
             android:background="@drawable/buttonshape"
             android:hint="Enter your password"
+            android:inputType="textPassword"
             android:paddingLeft="25dp"
             android:layout_marginTop="18dp"
             android:backgroundTint="@color/white"

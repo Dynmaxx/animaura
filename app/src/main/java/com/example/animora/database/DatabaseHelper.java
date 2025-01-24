@@ -1,4 +1,4 @@
-package com.example.animora;
+package com.example.animora.database;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
