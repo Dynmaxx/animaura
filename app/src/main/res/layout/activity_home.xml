@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Home">
+    tools:context=".HomeActivity">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -213,25 +213,25 @@
 
     <RelativeLayout
         android:id="@+id/rl_btnhome"
-        android:layout_marginTop="67dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="67dp"
         android:background="@color/ButtonColor">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/homebtn"
-            android:layout_marginStart="125dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="125dp"/>
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/keranjang"
+            android:layout_marginStart="125dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="125dp"
+            android:src="@drawable/homebtn" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="200dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="100dp"
-            />
+            android:src="@drawable/keranjang" />
     </RelativeLayout>
 </LinearLayout>
