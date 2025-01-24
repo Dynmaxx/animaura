@@ -1,9 +1,5 @@
 package com.example.animora;
 
-
-import android.content.ContentValues;
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -12,17 +8,9 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import android.database.Cursor;
-
-import android.database.sqlite.SQLiteDatabase;
-
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.animora.object.User;
 import com.example.animora.object.UserDatabase;
-
-import java.util.ArrayList;
 
 public class RegisterActivty extends AppCompatActivity {
     private ImageView back_reg;
@@ -34,18 +22,11 @@ public class RegisterActivty extends AppCompatActivity {
     private EditText passwordregister;
     private UserDatabase userDatabase;
 
-
-//    DatabaseHelper dbhelper = new DatabaseHelper(this);
-//    SQLiteDatabase db = dbhelper.getWritableDatabase();
-
-    public static ArrayList<User> userList = new ArrayList<>();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         getSupportActionBar().hide();
-
 
         txt_log = findViewById(R.id.txt_log);
         back_reg = findViewById(R.id.back_reg);
@@ -54,6 +35,7 @@ public class RegisterActivty extends AppCompatActivity {
         emailregister = findViewById(R.id.emailregister);
         passwordregister = findViewById(R.id.passwordregister);
         confirmpass = findViewById(R.id.confirmpass);
+        userDatabase = new UserDatabase(this);
 
         but_regis.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,30 +43,44 @@ public class RegisterActivty extends AppCompatActivity {
                 String username = namaregister.getText().toString();
                 String email = emailregister.getText().toString();
                 String password = passwordregister.getText().toString();
-                String confpas = confirmpass.getText().toString();
-                if (!password.equals(confpas)) {
+                String confirmPassword = confirmpass.getText().toString();
+
+                // Validasi input
+                if (username.isEmpty() || email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
+                    Toast.makeText(RegisterActivty.this, "Please fill in all fields!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if (!password.equals(confirmPassword)) {
                     Toast.makeText(RegisterActivty.this, "Passwords do not match!", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                userDatabase.registerUser (email, password);
-                Toast.makeText(RegisterActivty.this, "User  registered!", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(RegisterActivty.this, LoginActivity.class));
-            }
 
+                // Mendaftar pengguna
+                if (userDatabase.registerUser (username, email, password)) {
+                    Toast.makeText(RegisterActivty.this, "Registration successful!", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(RegisterActivty.this, LoginActivity.class));
+                    finish();
+                } else {
+                    Toast.makeText(RegisterActivty.this, "Registration failed! Email or username may already exist.", Toast.LENGTH_SHORT).show();
+                }
+            }
         });
+
         back_reg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent Backreg = new Intent(getApplicationContext(), MainActivity.class);
+                Intent Backreg = new Intent(RegisterActivty.this, MainActivity.class);
                 startActivity(Backreg);
             }
         });
+
         txt_log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent txtlog = new Intent(getApplicationContext(), LoginActivity.class);
+                Intent txtlog = new Intent(RegisterActivty.this, LoginActivity.class);
                 startActivity(txtlog);
             }
         });
     }
-    }
+}
