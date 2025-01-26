@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,22 +16,28 @@
         android:theme="@style/Theme.Animora"
         tools:targetApi="31">
         <activity
-            android:name=".CartActivity"
+            android:name=".Activity.AnimalActivity"
             android:exported="false" />
         <activity
-            android:name=".Animal"
+            android:name=".Activity.AddresActivity"
             android:exported="false" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".Activity.CartActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".Activity.foodActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivty"
+            android:name=".Activity.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Activity.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.RegisterActivty"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

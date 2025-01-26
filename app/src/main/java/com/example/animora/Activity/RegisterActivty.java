@@ -1,4 +1,4 @@
-package com.example.animora;
+package com.example.animora.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.animora.R;
 import com.example.animora.database.UserDatabase;
 
 public class RegisterActivty extends AppCompatActivity {

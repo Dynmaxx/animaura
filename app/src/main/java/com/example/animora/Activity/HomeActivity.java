@@ -1,24 +1,18 @@
-package com.example.animora;
+package com.example.animora.Activity;
 
 import android.content.Intent;
-import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
+import com.example.animora.R;
 import com.example.animora.database.UserDatabase;
-import com.example.animora.object.User;
+
 public class HomeActivity extends AppCompatActivity {
     private TextView txt_user;
     private UserDatabase userDatabase;
@@ -49,7 +43,7 @@ public class HomeActivity extends AppCompatActivity {
         btn_food.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent btnfood = new Intent(getApplicationContext(),foodActivity.class);
+                Intent btnfood = new Intent(getApplicationContext(), foodActivity.class);
                 startActivity(btnfood);
             }
         });

@@ -13,6 +13,20 @@ public class User {
       this.email = email;
       this.password = password;
    }
+   // Constructor ke 2 (overloading constructor)
+   public User(String name, String email, String password) {
+      this.name = name;
+      this.email = email;
+      this.password = password;
+      // id bisa diatur ke nilai default atau dihasilkan secara otomatis
+      this.id = generateId(); // Misalnya, metode untuk menghasilkan ID
+   }
+
+   // Metode untuk menghasilkan ID (contoh)
+   private String generateId() {
+      // Logika untuk menghasilkan ID
+      return "default-id"; // Ganti dengan logika yang sesuai
+   }
 
    // Getter dan Setter untuk ID
    public String getId() {
