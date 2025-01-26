@@ -25,16 +25,10 @@
             android:name=".Activity.AdminActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.AnimalActivity"
-            android:exported="false" />
-        <activity
             android:name=".Activity.AddresActivity"
             android:exported="false" />
         <activity
             android:name=".Activity.CartActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Activity.foodActivity"
             android:exported="false" />
         <activity
             android:name=".Activity.HomeActivity"

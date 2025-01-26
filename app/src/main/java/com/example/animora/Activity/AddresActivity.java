@@ -7,6 +7,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.animora.R;
 import com.example.animora.database.AddressManager;
@@ -26,7 +28,11 @@ public class AddresActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_addres);
-        getSupportActionBar().hide();
+//        getSupportActionBar().hide();
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.hide();
+        }
 
         edit_add = findViewById(R.id.edit_add);
         button_add = findViewById(R.id.button_add);
@@ -54,8 +60,10 @@ public class AddresActivity extends AppCompatActivity {
                     initializeCustomerInformation(); // Reload initial data
 
                     // Return to CartActivity
+
                     Intent intent = new Intent(getApplicationContext(), CartActivity.class);
                     startActivity(intent);
+                    finish();
                 } else {
                     Toast.makeText(AddresActivity.this, "Please enter address and select payment method", Toast.LENGTH_SHORT).show();
                 }

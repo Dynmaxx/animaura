@@ -44,7 +44,7 @@
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/view3"
+                android:id="@+id/recyclerView_cart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:contextClickable="false" />
@@ -70,7 +70,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="36dp"
                     android:text="Subtotal"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -79,52 +79,32 @@
                     android:id="@+id/pricesb"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="36dp"
                     android:text="$-"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.83"
+                    app:layout_constraintHorizontal_bias="0.835"
                     app:layout_constraintStart_toEndOf="@+id/subtotal"
                     app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/Delivery"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    android:text="Delivery"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/subtotal" />
 
                 <TextView
                     android:id="@+id/Tax"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="17dp"
                     android:text="Tax"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/Delivery" />
-
-                <TextView
-                    android:id="@+id/PriceDelivery"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="50dp"
-                    android:text="$-"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/pricesb" />
+                    app:layout_constraintTop_toBottomOf="@+id/subtotal" />
 
                 <TextView
                     android:id="@+id/pricetax"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="22dp"
+                    android:layout_marginTop="17dp"
                     android:layout_marginEnd="50dp"
                     android:text="$-"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/PriceDelivery" />
+                    app:layout_constraintTop_toBottomOf="@+id/pricesb" />
 
                 <View
                     android:id="@+id/view"
@@ -132,7 +112,7 @@
                     android:layout_height="1dp"
                     android:layout_marginTop="8dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.52"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/Tax" />
 

@@ -1,19 +1,18 @@
-package com.example.animora;
+package com.example.animora.database;
+
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.os.AsyncTask;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.ImageView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 
+import com.example.animora.R;
 import com.example.animora.object.Product;
 import com.example.animora.database.ProductDatabase;
 
@@ -48,8 +47,6 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         holder.textViewProductName.setText(product.getName());
         holder.textViewProductPrice.setText(String.valueOf(product.getPrice()));
         holder.itemView.setOnClickListener(v -> listener.onProductClick(product));
-
-
     }
 
 

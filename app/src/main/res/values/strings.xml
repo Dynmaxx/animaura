@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Animora</string>
+    <string name="product_image_description">A sample product image</string>
+    <string name="save_button_description">Save the product details</string>
 </resources>
