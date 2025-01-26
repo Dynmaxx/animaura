@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.animora.R;
 
 public class MainActivity extends AppCompatActivity {
-Button btnlogin,btnregister;
+Button btnlogin,btnregister,btnadmin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +18,7 @@ Button btnlogin,btnregister;
         getSupportActionBar().hide();
         btnlogin = (Button) findViewById(R.id.btnlogin);
         btnregister = (Button) findViewById(R.id.btnregister);
+        btnadmin = (Button) findViewById(R.id.btnadmin);
 
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,6 +31,13 @@ Button btnlogin,btnregister;
             @Override
             public void onClick(View v) {
                 btnRegister();
+            }
+        });
+        btnadmin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent admin = new Intent(getApplicationContext(), AdminLoginActivity.class);
+                startActivity(admin);
             }
         });
     }

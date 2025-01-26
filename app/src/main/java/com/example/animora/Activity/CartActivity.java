@@ -30,7 +30,8 @@ public class CartActivity extends AppCompatActivity {
         cart_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish(); // Close the CartActivity to return to the previous activity
+                Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                startActivity(intent);// Close the CartActivity to return to the previous activity
             }
         });
         addedit = findViewById(R.id.edit_add);

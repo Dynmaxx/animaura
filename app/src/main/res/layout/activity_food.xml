@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.foodActivity">
+    tools:context=".Activity.foodActivity"
+    android:orientation="vertical"
+    >
+    <!--android:padding="16dp"-->
 
-    <RelativeLayout
+
+
+    <LinearLayout
         android:id="@+id/ly_food"
         android:layout_width="428dp"
         android:layout_height="100dp"
@@ -23,98 +28,13 @@
             android:layout_marginEnd="145dp"
             android:layout_marginTop="20dp"
             android:textSize="40sp"/>
-    </RelativeLayout>
+    </LinearLayout>
 
-    <ImageView
-        android:id="@+id/whiskas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ly_food"
-        android:layout_marginTop="50dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        android:src="@drawable/whiskas" />
-    <TextView
-        android:id="@+id/txt_whiskas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Whiskas"
-        android:textSize="20dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginEnd="35dp"
-        android:textColor="@color/gray"
-        android:fontFamily="@font/poppinssemibold"
-        android:layout_below="@+id/whiskas"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp" />
 
-    <TextView
-        android:id="@+id/price_whiskas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txt_whiskas"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="-8dp"
-        android:layout_marginEnd="35dp"
-        android:fontFamily="@font/poppinssemibold"
-        android:text="Rp45.000"
-        android:textColor="@color/black"
-        android:textSize="20dp" />
-    <ImageView
-        android:id="@+id/plus_whiskas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/price_whiskas"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
-        android:src="@drawable/plus"/>
-    <ImageView
-        android:id="@+id/pedigre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/ly_food"
-        android:src="@drawable/pedigre"
-        android:layout_marginTop="50dp"
-        android:layout_marginStart="245dp"/>
-    <TextView
-        android:id="@+id/txt_ped"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/pedigre"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="245dp"
-        android:layout_marginEnd="245dp"
-        android:textColor="@color/gray"
-        android:fontFamily="@font/poppinssemibold"
-        android:text="Pedigree Adult"/>
-
-    <TextView
-        android:id="@+id/txt_ped2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txt_ped"
-        android:layout_marginTop="-5dp"
-        android:layout_marginStart="220dp"
-        android:layout_marginEnd="220dp"
-        android:textColor="@color/gray"
-        android:fontFamily="@font/poppinssemibold"
-        android:text="Beef And Vegetables"/>
-
-    <TextView
-        android:id="@+id/price_ped"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Rp.310.000"
-        android:layout_marginTop="-5dp"
-        android:layout_marginStart="260dp"
-        android:layout_marginEnd="245dp"
-        android:fontFamily="@font/poppinssemibold"
-        android:textColor="@color/black"
-        android:layout_below="@id/txt_ped2"/>
-    <ImageView
-        android:id="@+id/plus_ped"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/price_ped"
-        android:layout_marginStart="270dp"
-        android:layout_marginEnd="270dp"
-        android:src="@drawable/plus"/>
-</RelativeLayout>
+</LinearLayout>

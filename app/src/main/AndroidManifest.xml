@@ -16,6 +16,15 @@
         android:theme="@style/Theme.Animora"
         tools:targetApi="31">
         <activity
+            android:name=".Activity.AdminLoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ProductEditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.AdminActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activity.AnimalActivity"
             android:exported="false" />
         <activity

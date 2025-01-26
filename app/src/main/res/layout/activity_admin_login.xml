@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.LoginActivity">
+
+    <ImageView
+        android:id="@+id/shapeadmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/blueshape" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/backbutton"
+        android:id="@+id/back_admin"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:id="@+id/juduladmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shapeadmin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="Welcome Back"
+        android:textSize="30dp"
+        android:fontFamily="@font/poppinsbold"
+        android:textColor="@color/PrimaryColor" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/robot"
+        android:id="@+id/robot"
+        android:layout_marginStart="-20dp"
+        android:layout_marginEnd="-20dp"
+        android:layout_below="@+id/juduladmin"
+        android:paddingLeft="25dp"
+        android:layout_marginTop="10dp"
+        />
+    <LinearLayout
+
+        android:id="@+id/ly_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/robot"
+        android:layout_marginTop="20dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/buttonshape"
+            android:hint="Enter your Username"
+            android:paddingLeft="25dp"
+            android:backgroundTint="@color/white"
+            android:id="@+id/adminlogin"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/buttonshape"
+            android:hint="Enter your password"
+            android:inputType="textPassword"
+            android:paddingLeft="25dp"
+            android:layout_marginTop="18dp"
+            android:backgroundTint="@color/white"
+            android:id="@+id/passwordadmin"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/adminlog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="login"
+        android:layout_below="@id/ly_2"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bluebutton"
+        android:width="250dp"
+        android:fontFamily="@font/poppinsextra"
+        android:textSize="18dp"
+        android:textColor="@color/white"
+        />
+</RelativeLayout>
